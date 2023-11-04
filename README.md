@@ -35,5 +35,6 @@ Every project should utilize logging, but for simple use cases, this requires a 
 
 ## Documentation
 
-In this project, the [Kubernetes Python Client](https://github.com/kubernetes-client/python) proposed by kubernetes.io was used.  
+In this project, the [Kubernetes Python Client](https://github.com/kubernetes-client/python) proposed by kubernetes.io was used.
+Kubernetes Python Client API Endpoint List -- [Referance List](https://github.com/kubernetes-client/python/blob/36cfbe68a509d9b9d33395b22b6fa94d7d46c30f/kubernetes/README.md)
 This CLI application is coded with [arge-parse ](https://github.com/serbayacar/passkeepPy/blob/master/LICENSE.gpl).
