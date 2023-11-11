@@ -10,6 +10,8 @@ from src.commands.statefulsets import StatefulSets
 from src.commands.daemonsets import DaemonSets
 from src.commands.jobs import Jobs
 from src.commands.cronjobs import CronJobs
+from src.commands.secrets import Secrets
+from src.commands.configmaps import ConfigMaps
 
 class KSave(object):
 
@@ -27,6 +29,7 @@ class KSave(object):
         subcommands["statefulsetsCommand"] = StatefulSets(sub_parser)
         subcommands["cronjobsCommand"] = CronJobs(sub_parser)
         subcommands["jobsCommand"] = Jobs(sub_parser)
+        subcommands["secretsCommand"] = Jobs(sub_parser)
 
         ## Finally parse all arguments
         args = parser.parse_args()
