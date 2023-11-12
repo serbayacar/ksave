@@ -14,6 +14,9 @@ from src.commands.secrets import Secrets
 from src.commands.configmaps import ConfigMaps
 from src.commands.ingress import Ingress
 from src.commands.services import Services
+from src.commands.storageclass import StorageClass
+from src.commands.persistentvolumes import PersistentVolume
+from src.commands.persistentvolumeclaims import PersistentVolumeClaim
 
 class KSave(object):
 
@@ -35,6 +38,9 @@ class KSave(object):
         subcommands["configmapsCommand"] = ConfigMaps(sub_parser)
         subcommands["ingressCommand"] = Ingress(sub_parser)
         subcommands["servicesCommand"] = Services(sub_parser)
+        subcommands["storageclassCommand"] = StorageClass(sub_parser)
+        subcommands["persistentvolumesCommand"] = PersistentVolume(sub_parser)
+        subcommands["persistentvolumeclaimsCommand"] = PersistentVolumeClaim(sub_parser)
 
         ## Finally parse all arguments
         args = parser.parse_args()

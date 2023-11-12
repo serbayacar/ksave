@@ -23,3 +23,7 @@ class K8S:
     @staticmethod
     def get_networking_v1_api():
         return client.NetworkingV1Api()
+
+    @staticmethod
+    def get_storage_v1_api():
+        return client.StorageV1Api()
