@@ -8,8 +8,8 @@ class RoleBinding:
     api_instance= K8S().get_rbac_authorization_v1_api()
 
     def __init__(self,sub_parser):
-        # create the parser for the "cronjobs" sub-command
-        parser_rolebinding = sub_parser.add_parser('rolebindings', help='rolebinding is cool sub-command')
+        # create the parser for the "rolebindings" sub-command
+        parser_rolebinding = sub_parser.add_parser('rolebindings', help='Back up your Kubernetes RoleBinding objects')
         parser_rolebinding.add_argument('name', nargs='*', help="Specify RoleBinding name(s)")
         parser_rolebinding.add_argument('--namespace', dest='namespace', default="default", help="Namespace definition")
         parser_rolebinding.add_argument('--all', '-A', action="store_true", dest='is_all', default=False, help="Get all RoleBinding resources in all namespaces")

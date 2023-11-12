@@ -9,7 +9,7 @@ class CronJobs:
 
     def __init__(self,sub_parser):
         # create the parser for the "cronjobs" sub-command
-        parser_cronjobs = sub_parser.add_parser('cronjobs', help='cronjobs is cool sub-command')
+        parser_cronjobs = sub_parser.add_parser('cronjobs', help='Back up your Kubernetes CronJob objects')
         parser_cronjobs.add_argument('name', nargs='*', help="Specify Cronjobs name(s)")
         parser_cronjobs.add_argument('--namespace', dest='namespace', default="default", help="Namespace definition")
         parser_cronjobs.add_argument('--all', '-A', action="store_true", dest='is_all', default=False, help="Get all CronJobs resources in all namespaces")

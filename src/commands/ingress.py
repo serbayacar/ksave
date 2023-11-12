@@ -8,8 +8,8 @@ class Ingress:
     api_instance= K8S().get_networking_v1_api()
 
     def __init__(self,sub_parser):
-        # create the parser for the "pod" sub-command
-        parser_ingress = sub_parser.add_parser('ingress', help='ingresss is cool sub-command')
+        # create the parser for the "ingress" sub-command
+        parser_ingress = sub_parser.add_parser('ingress', help='Back up your Kubernetes Ingress objects')
         parser_ingress.add_argument('name', nargs='*', help="Specify Ingress name(s)")
         parser_ingress.add_argument('--namespace', dest='namespace', default="default", help="Namespace definition")
         parser_ingress.add_argument('--all', '-A', action="store_true", dest='is_all', default=False, help="Get all Ingress resources in all namespaces")

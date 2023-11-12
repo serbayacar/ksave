@@ -8,7 +8,7 @@ class StatefulSets:
 
     def __init__(self,sub_parser):
         # create the parser for the "statefull" sub-command
-        parser_statefulset = sub_parser.add_parser('statefulsets', help='statefulsets is cool sub-command')
+        parser_statefulset = sub_parser.add_parser('statefulsets', help='Back up your Kubernetes Statefulsets objects')
         parser_statefulset.add_argument('name', nargs='*', help="Specify Statefulset name(s)")
         parser_statefulset.add_argument('--namespace', dest='namespace', default="default", help="Namespace definition")
         parser_statefulset.add_argument('--all', '-A', action="store_true", dest='is_all', default=False, help="Get all Statefulset resources in all namespaces")

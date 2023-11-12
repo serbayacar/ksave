@@ -9,7 +9,7 @@ class DaemonSets:
 
     def __init__(self,sub_parser):
         # create the parser for the "daemonsets" sub-command
-        parser_daemonsets = sub_parser.add_parser('daemonsets', help='daemonsets is cool sub-command')
+        parser_daemonsets = sub_parser.add_parser('daemonsets', help='Back up your Kubernetes Daemonsets objects')
         parser_daemonsets.add_argument('name', nargs='*', help="Specify Daemonsets name(s)")
         parser_daemonsets.add_argument('--namespace', dest='namespace', default="default", help="Namespace definition")
         parser_daemonsets.add_argument('--all', '-A', action="store_true", dest='is_all', default=False, help="Get all Daemonsets resources in all namespaces")

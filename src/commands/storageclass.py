@@ -8,8 +8,8 @@ class StorageClass:
     api_instance= K8S().get_storage_v1_api()
 
     def __init__(self,sub_parser):
-        # create the parser for the "cronjobs" sub-command
-        parser_storageclass = sub_parser.add_parser('storageclass', help='storageclass is cool sub-command')
+        # create the parser for the "storageclass" sub-command
+        parser_storageclass = sub_parser.add_parser('storageclass', help='Back up your Kubernetes StorageClass objects')
         parser_storageclass.add_argument('name', nargs='*', help="Specify StorageClass name(s)")
         # parser_storageclass.add_argument('--namespace', dest='namespace', default="default", help="Namespace definition")
         parser_storageclass.add_argument('--all', '-A', action="store_true", dest='is_all', default=False, help="Get all StorageClass resources in all namespaces")

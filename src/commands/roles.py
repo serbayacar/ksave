@@ -8,8 +8,8 @@ class Role:
     api_instance= K8S().get_rbac_authorization_v1_api()
 
     def __init__(self,sub_parser):
-        # create the parser for the "cronjobs" sub-command
-        parser_role = sub_parser.add_parser('roles', help='role is cool sub-command')
+        # create the parser for the "roles" sub-command
+        parser_role = sub_parser.add_parser('roles', help='Back up your Kubernetes Role objects')
         parser_role.add_argument('name', nargs='*', help="Specify Role name(s)")
         parser_role.add_argument('--namespace', dest='namespace', default="default", help="Namespace definition")
         parser_role.add_argument('--all', '-A', action="store_true", dest='is_all', default=False, help="Get all Role resources in all namespaces")

@@ -8,8 +8,8 @@ class Services:
     api_instance= K8S().get_core_v1_api()
 
     def __init__(self,sub_parser):
-        # create the parser for the "pod" sub-command
-        parser_service = sub_parser.add_parser('services', help='services is cool sub-command')
+        # create the parser for the "services" sub-command
+        parser_service = sub_parser.add_parser('services', help='Back up your Kubernetes Services objects')
         parser_service.add_argument('name', nargs='*', help="Specify Service name(s)")
         parser_service.add_argument('--namespace', dest='namespace', default="default", help="Namespace definition")
         parser_service.add_argument('--all', '-A', action="store_true", dest='is_all', default=False, help="Get all Service resources in all namespaces")

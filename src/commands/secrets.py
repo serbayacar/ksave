@@ -7,8 +7,8 @@ class Secrets:
     api_instance= K8S().get_core_v1_api()
 
     def __init__(self,sub_parser):
-        # create the parser for the "statefull" sub-command
-        parser_secret = sub_parser.add_parser('secrets', help='secrets is cool sub-command')
+        # create the parser for the "secrets" sub-command
+        parser_secret = sub_parser.add_parser('secrets', help='Back up your Kubernetes Secrets objects')
         parser_secret.add_argument('name', nargs='*', help="Specify Secret name(s)")
         parser_secret.add_argument('--namespace', dest='namespace', default="default", help="Namespace definition")
         parser_secret.add_argument('--all', '-A', action="store_true", dest='is_all', default=False, help="Get all Secret resources in all namespaces")

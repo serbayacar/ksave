@@ -8,8 +8,8 @@ class PersistentVolume:
     api_instance= K8S().get_core_v1_api()
 
     def __init__(self,sub_parser):
-        # create the parser for the "persistent_volumes" sub-command
-        parser_persistent_volumes = sub_parser.add_parser('persistentvolumes', help='persistentvolume is cool sub-command')
+        # create the parser for the "persistentvolumes" sub-command
+        parser_persistent_volumes = sub_parser.add_parser('persistentvolumes', help='Back up your Kubernetes PersistentVolume objects')
         parser_persistent_volumes.add_argument('name', nargs='*', help="Specify PersistentVolume name(s)")
         # parser_persistent_volumes.add_argument('--namespace', dest='namespace', default="default", help="Namespace definition")
         parser_persistent_volumes.add_argument('--all', '-A', action="store_true", dest='is_all', default=False, help="Get all PersistentVolume resources in all namespaces")

@@ -10,7 +10,7 @@ class Pods:
 
     def __init__(self,sub_parser):
         # create the parser for the "pod" sub-command
-        parser_pod = sub_parser.add_parser('pods', help='pods is cool sub-command')
+        parser_pod = sub_parser.add_parser('pods', help='Back up your Kubernetes Pod objects')
         parser_pod.add_argument('name', nargs='*', help="Specify pod name(s)")
         parser_pod.add_argument('--namespace', dest='namespace', default="default", help="Namespace definition")
         parser_pod.add_argument('--all', '-A', action="store_true", dest='is_all', default=False, help="Get all Pod resources in all namespaces")

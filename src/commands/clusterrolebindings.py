@@ -8,11 +8,11 @@ class ClusterRoleBinding:
     api_instance= K8S().get_rbac_authorization_v1_api()
 
     def __init__(self,sub_parser):
-        # create the parser for the "cronjobs" sub-command
-        parser_clusterrolebinding = sub_parser.add_parser('clusterrolebindings', help='clusterrolebinding is cool sub-command')
+        # create the parser for the "clusterrolebindings" sub-command
+        parser_clusterrolebinding = sub_parser.add_parser('clusterrolebindings', help='Back up your Kubernetes ClusterRoleBinding objects')
         parser_clusterrolebinding.add_argument('name', nargs='*', help="Specify ClusterRoleBinding name(s)")
         # parser_clusterrolebinding.add_argument('--namespace', dest='namespace', default="default", help="Namespace definition")
-        parser_clusterrolebinding.add_argument('--all', '-A', action="store_true", dest='is_all', default=False, help="Get all ClusterRoleBinding resources in all namespaces")
+        parser_clusterrolebinding.add_argument('--all', '-A', action="store_true", dest='is_all', default=False, help="Get ClusterRoleBinding resources in all namespaces")
         return
 
     def run(self,args):

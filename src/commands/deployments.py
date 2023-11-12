@@ -8,8 +8,8 @@ class Deployments:
     api_instance= K8S().get_apps_v1_api()
 
     def __init__(self,sub_parser):
-        # create the parser for the "pod" sub-command
-        parser_deployment = sub_parser.add_parser('deployments', help='deployments is cool sub-command')
+        # create the parser for the "deployments" sub-command
+        parser_deployment = sub_parser.add_parser('deployments', help='Back up your Kubernetes Deployments objects')
         parser_deployment.add_argument('name', nargs='*', help="Specify Deployment name(s)")
         parser_deployment.add_argument('--namespace', dest='namespace', default="default", help="Namespace definition")
         parser_deployment.add_argument('--all', '-A', action="store_true", dest='is_all', default=False, help="Get all Deployment resources in all namespaces")

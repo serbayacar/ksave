@@ -9,7 +9,7 @@ class ServiceAccount:
 
     def __init__(self,sub_parser):
         # create the parser for the "cronjobs" sub-command
-        parser_serviceaccount = sub_parser.add_parser('serviceaccount', help='serviceaccount is cool sub-command')
+        parser_serviceaccount = sub_parser.add_parser('serviceaccount', help='Back up your Kubernetes ServiceAccount objects')
         parser_serviceaccount.add_argument('name', nargs='*', help="Specify ServiceAccount name(s)")
         parser_serviceaccount.add_argument('--namespace', dest='namespace', default="default", help="Namespace definition")
         parser_serviceaccount.add_argument('--all', '-A', action="store_true", dest='is_all', default=False, help="Get all ServiceAccount resources in all namespaces")
