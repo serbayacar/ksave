@@ -9,7 +9,7 @@ class ClusterRoleBinding:
 
     def __init__(self,sub_parser):
         # create the parser for the "cronjobs" sub-command
-        parser_clusterrolebinding = sub_parser.add_parser('clusterrolebinding', help='clusterrolebinding is cool sub-command')
+        parser_clusterrolebinding = sub_parser.add_parser('clusterrolebindings', help='clusterrolebinding is cool sub-command')
         parser_clusterrolebinding.add_argument('name', nargs='*', help="Specify ClusterRoleBinding name(s)")
         # parser_clusterrolebinding.add_argument('--namespace', dest='namespace', default="default", help="Namespace definition")
         parser_clusterrolebinding.add_argument('--all', '-A', action="store_true", dest='is_all', default=False, help="Get all ClusterRoleBinding resources in all namespaces")
