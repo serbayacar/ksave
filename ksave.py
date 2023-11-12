@@ -18,7 +18,7 @@ from src.commands.storageclass import StorageClass
 from src.commands.persistentvolumes import PersistentVolume
 from src.commands.persistentvolumeclaims import PersistentVolumeClaim
 from src.commands.serviceaccounts import ServiceAccount
-from src.commands.role import Role
+from src.commands.roles import Role
 from src.commands.rolebindings import RoleBinding
 from src.commands.clusterroles import ClusterRole
 from src.commands.clusterrolebindings import ClusterRoleBinding
