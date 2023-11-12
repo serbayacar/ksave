@@ -1,6 +1,7 @@
 import yaml
 import json
 
+trim_keys= ["api_version","kind","metadata","spec"]
 
 class YAML:
 
@@ -12,8 +13,12 @@ class YAML:
         return dump
 
     @staticmethod
-    def fromObject(res):
-        dump=yaml.safe_dump(res.to_dict())
+    def fromObject(obj,trimmed=True):
+        if trimmed is True:
+            extracted_values = {key: obj.get(key) for key in trim_keys}
+            dump=yaml.safe_dump(extracted_values)
+        else:
+            dump= yaml.safe_dump(obj)
 
-        return dump
+        return "---\n" + dump.strip()
 

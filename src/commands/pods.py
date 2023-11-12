@@ -6,6 +6,7 @@ from src.helpers.yaml import YAML
 class Pods:
 
     api_instance= K8S().get_core_v1_api()
+    trim_keys= ["api_version","kind","metadata","spec"]
 
     def __init__(self,sub_parser):
         # create the parser for the "pod" sub-command
@@ -33,5 +34,5 @@ class Pods:
             print("Exception when calling Kubernetes API Server -- \n" % e)
 
         for response in responses:
-            yaml_dump = YAML().fromObject(response)
+            yaml_dump = YAML().fromObject(response.to_dict(), False)
             print(yaml_dump)
