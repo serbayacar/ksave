@@ -5,7 +5,7 @@ from src.helpers.yaml import YAML
 
 class Services:
 
-    api_instance= K8S().get_apps_v1_api()
+    api_instance= K8S().get_core_v1_api()
 
     def __init__(self,sub_parser):
         # create the parser for the "pod" sub-command
