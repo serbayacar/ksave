@@ -31,9 +31,10 @@ class KSave(object):
         subcommands["statefulsetsCommand"] = StatefulSets(sub_parser)
         subcommands["cronjobsCommand"] = CronJobs(sub_parser)
         subcommands["jobsCommand"] = Jobs(sub_parser)
-        subcommands["secretsCommand"] = Jobs(sub_parser)
+        subcommands["secretsCommand"] = Secrets(sub_parser)
+        subcommands["configmapsCommand"] = ConfigMaps(sub_parser)
         subcommands["ingressCommand"] = Ingress(sub_parser)
-        subcommands["serviceCommand"] = Services(sub_parser)
+        subcommands["servicesCommand"] = Services(sub_parser)
 
         ## Finally parse all arguments
         args = parser.parse_args()
