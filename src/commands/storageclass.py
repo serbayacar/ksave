@@ -30,7 +30,7 @@ class StorageClass:
                 for storageclass in args.name :
                     responses.append(self.api_instance.read_storage_class(storageclass, args.namespace or "default", pretty='true'))
         except Exception as e:
-            print("Exception when calling BatchV1Api --\n" % e)
+            print("Exception when calling Kubernetes API Server -- \n" % e)
 
         for response in responses:
             yaml_dump = YAML().fromObject(response)

@@ -30,7 +30,7 @@ class PersistentVolume:
                 for persistent_volume in args.name :
                     responses.append(self.api_instance.read_persistent_volume(persistent_volume, pretty='true'))
         except Exception as e:
-            print("Exception when calling CoreV1Api --\n" % e)
+            print("Exception when calling Kubernetes API Server -- \n" % e)
 
         for response in responses:
             yaml_dump = YAML().fromObject(response)

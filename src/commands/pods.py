@@ -30,7 +30,7 @@ class Pods:
                 for pod in args.name :
                     responses.append(self.api_instance.read_namespaced_pod(pod, args.namespace or "default", pretty='true'))
         except Exception as e:
-            print("Exception when calling CoreV1Api->list_namespaced_pod: %s\n" % e)
+            print("Exception when calling Kubernetes API Server -- \n" % e)
 
         for response in responses:
             yaml_dump = YAML().fromObject(response)

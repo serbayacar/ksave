@@ -29,7 +29,7 @@ class StatefulSets:
                 for statefulset in args.name :
                     responses.append(self.api_instance.read_namespaced_stateful_set(statefulset, args.namespace or "default", pretty='true'))
         except Exception as e:
-            print("Exception when calling AppsV1Api --\n" % e)
+            print("Exception when calling Kubernetes API Server -- \n" % e)
 
         for response in responses:
             yaml_dump = YAML().fromObject(response)
