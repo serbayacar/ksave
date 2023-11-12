@@ -12,6 +12,8 @@ from src.commands.jobs import Jobs
 from src.commands.cronjobs import CronJobs
 from src.commands.secrets import Secrets
 from src.commands.configmaps import ConfigMaps
+from src.commands.ingress import Ingress
+from src.commands.services import Services
 
 class KSave(object):
 
@@ -30,6 +32,8 @@ class KSave(object):
         subcommands["cronjobsCommand"] = CronJobs(sub_parser)
         subcommands["jobsCommand"] = Jobs(sub_parser)
         subcommands["secretsCommand"] = Jobs(sub_parser)
+        subcommands["ingressCommand"] = Ingress(sub_parser)
+        subcommands["serviceCommand"] = Services(sub_parser)
 
         ## Finally parse all arguments
         args = parser.parse_args()
