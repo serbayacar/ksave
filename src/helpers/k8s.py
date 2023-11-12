@@ -27,3 +27,7 @@ class K8S:
     @staticmethod
     def get_storage_v1_api():
         return client.StorageV1Api()
+
+    @staticmethod
+    def get_rbac_authorization_v1_api():
+        return client.RbacAuthorizationV1Api()

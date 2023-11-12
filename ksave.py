@@ -17,6 +17,11 @@ from src.commands.services import Services
 from src.commands.storageclass import StorageClass
 from src.commands.persistentvolumes import PersistentVolume
 from src.commands.persistentvolumeclaims import PersistentVolumeClaim
+from src.commands.serviceaccounts import ServiceAccount
+from src.commands.role import Role
+from src.commands.rolebindings import RoleBinding
+from src.commands.clusterroles import ClusterRole
+from src.commands.clusterrolebindings import ClusterRoleBinding
 
 class KSave(object):
 
@@ -41,6 +46,11 @@ class KSave(object):
         subcommands["storageclassCommand"] = StorageClass(sub_parser)
         subcommands["persistentvolumesCommand"] = PersistentVolume(sub_parser)
         subcommands["persistentvolumeclaimsCommand"] = PersistentVolumeClaim(sub_parser)
+        subcommands["serviceaccountCommand"] = ServiceAccount(sub_parser)
+        subcommands["rolesCommand"] = Role(sub_parser)
+        subcommands["rolebindingsCommand"] = RoleBinding(sub_parser)
+        subcommands["clusterrolesCommand"] = ClusterRole(sub_parser)
+        subcommands["clusterrolebindingsCommand"] = ClusterRoleBinding(sub_parser)
 
         ## Finally parse all arguments
         args = parser.parse_args()
