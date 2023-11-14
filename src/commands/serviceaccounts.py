@@ -33,5 +33,5 @@ class ServiceAccount:
             print("Exception when calling Kubernetes API Server -- \n" % e)
 
         for response in responses:
-            yaml_dump = YAML().fromObject(response.to_dict())
+            yaml_dump = YAML().fromObject(response.to_dict(), False)
             print(yaml_dump)
