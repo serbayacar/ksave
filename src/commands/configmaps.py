@@ -9,7 +9,7 @@ class ConfigMaps:
     def __init__(self,sub_parser):
         # create the parser for the "configmap" sub-command
         parser_configmap = sub_parser.add_parser('configmaps', help='Back up your Kubernetes ConfigMap objects')
-        parser_configmap.add_argument('name', nargs='*', help="Specify Configmap name(s)")
+        parser_configmap.add_argument('name', nargs='*', help="Specify ConfigMap name(s)")
         parser_configmap.add_argument('--namespace', dest='namespace', default="default", help="Namespace definition")
         parser_configmap.add_argument('--all', '-A', action="store_true", dest='is_all', default=False, help="Get all Configmap resources in all namespaces")
         return

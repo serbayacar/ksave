@@ -10,7 +10,7 @@ class PersistentVolumeClaim:
     def __init__(self,sub_parser):
         # create the parser for the "persistentvolumeclaims" sub-command
         parser_peristentvolumeclaims = sub_parser.add_parser('peristentvolumeclaims', help='Back up your Kubernetes PersistentVolumeClaim objects')
-        parser_peristentvolumeclaims.add_argument('name', nargs='*', help="Specify peristentvolumeclaims name(s)")
+        parser_peristentvolumeclaims.add_argument('name', nargs='*', help="Specify PeristentVolumecClaim name(s)")
         parser_peristentvolumeclaims.add_argument('--namespace', dest='namespace', default="default", help="Namespace definition")
         parser_peristentvolumeclaims.add_argument('--all', '-A', action="store_true", dest='is_all', default=False, help="Get all PeristentVolumeClaims resources in all namespaces")
         return

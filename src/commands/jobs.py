@@ -10,7 +10,7 @@ class Jobs:
     def __init__(self,sub_parser):
         # create the parser for the "jobs" sub-command
         parser_jobs = sub_parser.add_parser('jobs', help='Back up your Kubernetes Job objects')
-        parser_jobs.add_argument('name', nargs='*', help="Specify jobs name(s)")
+        parser_jobs.add_argument('name', nargs='*', help="Specify Jobs name(s)")
         parser_jobs.add_argument('--namespace', dest='namespace', default="default", help="Namespace definition")
         parser_jobs.add_argument('--all', '-A', action="store_true", dest='is_all', default=False, help="Get all Jobs resources in all namespaces")
         return
